@@ -1,0 +1,76 @@
+<h1>Welcome to CourseCube!!!</h1>
+<h2>You are Learning Angular 7 from Chandan Kumar</h2>
+<hr/>
+<h2>Using Event Binding</h2>
+<button (click)="showMessage1()">Click Here</button>
+<button (click)="showMessage2('asd', 'a@d.com')">Click Here</button>
+<hr/>
+<h2>Using Properties Binding</h2>
+<table>
+<tr>
+  <td>CourseName</td>
+  <td>{{cname}}</td>
+</tr>
+<tr>
+    <td>Cost</td>
+    <td>{{cost}}</td>
+</tr>
+<tr>
+    <td>Trainer Name</td>
+    <td>{{trainer}}</td>
+  </tr>
+  <tr>
+     <td>Start Date</td>
+     <td>{{startDate}}</td>
+  </tr>
+  <tr>
+      <td>Is Online Class</td>
+      <td>{{isOnline}}</td>
+  </tr>
+</table>
+<hr/>
+
+<h2>Using Objects Binding</h2>
+<table>
+<tr>
+  <td>CourseName</td>
+  <td>{{course.cname}}</td>
+</tr>
+<tr>
+  <td>Cost</td>
+  <td>{{course.cost}}</td>
+</tr>
+<tr>
+    <td>Trainer Name</td>
+    <td>{{course.trainer}}</td>
+  </tr>
+  <tr>
+      <td>Duration</td>
+      <td>{{course.duration}}</td>
+    </tr>
+</table>
+<hr/>
+
+<h2>Using Arrays Binding</h2>
+<ul>
+<ol *ngFor="let cou of courseNames">{{cou}}</ol>
+</ul>
+<hr/>
+
+<h2>Using List</h2>
+<table>
+  <tr>
+    <td>Course Name</td>
+    <td>Cost</td>
+    <td>Trainer Name</td>
+    <th>Duration</th>
+    </tr>
+    <tr *ngFor="let mycou of mycourses">
+        <td>{{mycou.cname}}</td>
+        <td>{{mycou.cost}}</td>
+        <td>{{mycou.trainer}}</td>
+        <th>{{mycou.duration}}</th>
+        <td><button (click)="getCourseInfo(mycou)">View Data</button></td>
+        </tr>
+  </table>
+<hr/>
